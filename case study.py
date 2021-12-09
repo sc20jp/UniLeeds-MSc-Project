@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-df = pd.read_excel('case.xlsx')
+df = pd.read_excel('cum_case.xlsx')
 value = df['newCasesByPublishDate'].values[160:1000]
 print(len(value))
 x = []
