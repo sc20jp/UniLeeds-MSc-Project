@@ -1,4 +1,4 @@
-# Projections for cumulative cases in Leeds
+# For Cumulative Cases Prediction
 
 import torch
 from torch import nn
@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 
 # Data pre-processing
 import pandas as pd
-df = pd.read_excel('cum_leeds.xlsx')
-value = df['cum_case'].values[10:67]
+df = pd.read_excel('real_data.xlsx')
+value = df['Cumulative national diagnoses'].values[10:67]
 print(len(value))
 x = []
 y = []
@@ -62,7 +62,7 @@ plt.legend(loc='upper right')
 print(len(value[3:]))
 print(len(prediction[40:]))
 plt.legend(loc='best')
-plt.title('Cumulative cases prediction(Leeds)')
+plt.title('Cumulative cases prediction(England)')
 plt.xlabel('Day')
 plt.ylabel('Cumulative Cases')
 plt.show()

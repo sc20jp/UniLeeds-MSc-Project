@@ -1,4 +1,4 @@
-# Projections for cumulative deaths in Leeds
+# For Cumulative Death Cases Prediction
 
 import torch
 from torch import nn
@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # Data pre-processing
 import pandas as pd
-df = pd.read_excel('death_leeds .xlsx')
+df = pd.read_excel('death.xlsx')
 value = df['death'].values[10:67]
 print(len(value))
 x = []
@@ -62,7 +62,7 @@ plt.legend(loc='upper right')
 print(len(value[3:]))
 print(len(prediction[40:]))
 plt.legend(loc='best')
-plt.title('Cumulative death cases prediction(Leeds)')
-plt.xlabel('Week')
+plt.title('Cumulative death cases prediction(England)')
+plt.xlabel('Day')
 plt.ylabel('Cumulative Death Cases')
 plt.show()
